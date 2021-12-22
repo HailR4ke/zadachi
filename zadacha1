@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+class Box{
+    //
+public:    
+    int q;
+    int w;
+    int e;
+    
+    int V();
+    int S();
+    
+    Box(int a1=1, int b1=1, int c1=1){
+        q = a1;
+        w = b1;
+        e = c1;
+    }
+    
+    
+    ~Box(){cout <<"Yaschik has been fallen\n";}
+};
+
+int Box::V(){
+    return q*w*e;
+    }
+int Box::S(){
+    return q*w;
+    }
+
+int main()
+{
+    Box box1(3,12,9);
+    cout << "New box" << '\n';
+    cout << "Volume: " <<box1.V()<< '\n';
+    cout << "Area: "<< box1.S()<< '\n';
+    Box box2(12,1,5);
+    cout << "New box" << '\n';
+    cout << "Volume: "<< box2.V()<< '\n';
+    cout << "Area: "<< box2.S()<< '\n';
+    Box box3(7,6,5);
+    cout << "New box" << '\n';
+    cout << "Volume: "<< box3.V()<< '\n';
+    cout << "Area: "<< box3.S()<< '\n';
+
+    return 0;
+}
