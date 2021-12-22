@@ -1,0 +1,22 @@
+#include <iostream>
+#include "gruppa.h"
+using namespace std;
+
+Group SummGroups(Group q, Group w){
+    Group e;
+    e.girl = q.girl + w.girl; 
+    e.boy = q.boy + w.boy;
+    return e;
+} 
+
+int main()
+{
+    Group group1(12, 13), group2(14,8);    // объявление двух групп
+    cout << group1.girl << "\n";    // количество девочек
+    cout << group1.boy << "\n";    // количество мальчиков
+    cout << group1.total() << "\n";    // количество учащихся в 1 группе
+    cout << group2.total() << "\n";    // количество учащихся во 2 группе
+    cout << SummGroups(group1, group2).total() << "\n";    // общее количество
+
+    return 0;
+}
