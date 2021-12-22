@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+namespace vecmath {
+    class Vector{
+        public:
+            float q, w;
+            void mirror(){
+                q = -q;
+                w = -w;
+                };
+                
+            float len(){
+                float l;
+                l = sqrt(q*q + w*w);
+                return l;
+                };
+            
+            float ang(){
+                float alpha;
+                alpha = asin(q/(this -> len()))*(180/3.14);
+                return alpha;
+                };
+            
+            void report(){
+                using namespace std;
+                cout << " Q: " << q << " W: " << w << '\n';
+                this -> mirror();
+                cout << " Mirrored: Q: " << q << " W: " << w << '\n';
+                this -> mirror();
+                cout << " Lenght: " << this -> len() << '\n';
+                cout << " Angle: " << this -> ang() << '\n';
+                };
+            
+            
+            Vector(double a = 1, double b = 1){
+                q = a;
+                w = b;
+                };
+    
+            ~Vector(){std::cout <<"Vector annigilatied\n";}
+    };
+ }
