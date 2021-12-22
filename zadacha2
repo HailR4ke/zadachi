@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+void print(int *iarrai){
+    
+    for(int y = 0; y < 4; y++){
+        cout << iarrai[y] << " ";
+        };
+    cout << '\n';
+};
+
+void print(float *flarrai){
+    for(int y = 0; y < 4; y++){
+        cout << flarrai[y] << " ";
+        };
+    cout << '\n';
+};
+
+void print(char *word){
+    while(*word){cout << *word; word++;};
+    cout <<'\n';
+};
+
+int main()
+{
+    print("Proverka");
+    int q[] = {1, 2, 3, 4};
+    float w[] = {5, 6, 7, 8};
+    print(q);
+    print(w);
+    
+
+    return 0;
+}
