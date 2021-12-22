@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class Group{
+    //
+public:    
+    int girl;
+    int boy;
+    
+    int total();
+    
+    Group(int q = 0, int w=0){
+        girl = q;
+        boy = w;
+    }
+    
+    
+    ~Group(){cout <<"Group was denied\n";}
+};
+
+int Group::total(){
+    return girl+boy;
+    }
