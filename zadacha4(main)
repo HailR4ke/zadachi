@@ -1,0 +1,17 @@
+#include <iostream>
+#include "vectors.h"
+using namespace std;
+
+int main()
+{
+    using namespace vecmath;
+    Vector vec[5] = {{3, 3}, {1, -1}, {-4, 2}, {-3, -1}, {12.3, -0.9}};
+    Vector *p = vec;
+    for (int i = 0; i < 5; i++){
+        p -> report();
+        p++;
+    }
+
+    return 0;
+}
+
